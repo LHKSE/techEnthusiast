@@ -223,16 +223,18 @@ body{
     transform:rotate(-45deg);
 }
 .header-image img{
-    height: 100vh;
-    float: right;
+    position: absolute; /* Position the image absolutely within its container */
+    top: 0;
+    left: 0;
+    width: 100%;    /* Ensure the image covers the entire width */
+    height: 100%;   /* Ensure the image covers the entire height */
+    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
 }
 .header-image{
-    float: right;
-    height: auto;
-    background-size: cover;
-    background-position: center;
-    width: 40%;   
-    height: 100vh;
+    position: relative;  /* Change from float to position relative */
+    height: 100vh;  /* Ensure it takes full height of the viewport */
+    width: 100vw;   /* Ensure it takes full width of the viewport */
+    overflow: hidden; /* Hide overflow to maintain full screen appearance */
 
 }
 .header-content{
